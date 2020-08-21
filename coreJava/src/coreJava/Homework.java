@@ -1,5 +1,10 @@
 package coreJava;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 public class Homework {
 
 	//method for sorting array (bubble sort)
@@ -53,16 +58,98 @@ public class Homework {
 	public void factorial(int a) {
 		int result = a;
 		for(int i = a - 1; i >= 1; i--) {
-			result = result * i;
+                   			result = result * i;
 		}
 		System.out.println(result);
 	}
 	
-	public void SubStringMethod(String a, int b) {
-		for(int i = 0; i < b; i++) {
+	public void Substring(String a, int b) {
+		char[] array = new char[b];
+		for(int i=0; i< b; i++) {
+			array[i] = a.charAt(i);
+		}
+		System.out.println(String.copyValueOf(array));
+	}
+	
+	public void checkEven(int a) {
+		if((a /2)*2 == a) {
+			System.out.println("Even");
+		}
+		else {
+			System.out.println("Odd");
+		}
+	}
+	
+	public class Employee implements Comparable<Employee>{
+		private String name;
+		private String department;
+		private int age;
+		
+		public Employee(String name, String department, int age) {
+			this.name = name;
+			this.department = department;
+			this.age = age;
+		}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public void setName(String name) {
+			this.name = name;
+		}
+		
+		public String getDepartment() {
+			return department;
+		}
+		
+		public void setDepartment() {
+			this.department = department;
+		}
+		
+		public int getAge() {
+			return age;
+		}
+		
+		public void setAge() {
+			this.age = age;
+		}
+		
+		@Override
+		public int compareTo(Employee anotherEmployee) {
+			return this.getAge() - anotherEmployee.getAge();
+		}
+		
+		@Override
+		public boolean equals(Object o) {
+			if(this == o) return true;
+			if(o == null || getClass() != o.getClass()) return false;
+			Employee employee = (Employee) o;
+			return age == employee.age;
+		}
+		
+		@Override
+		public String toString() {
+			return "Employee name: " + name + " Employee department: " + department
+					+ " Employee age: " + age;
+		}
+		
+	}
+	public void palindromeChecker(ArrayList<String> a) {
+		ArrayList<String> palindrome = new ArrayList<String>();
+		
+		public void isPalindrome(String x) {
+			if(x == null || x.isEmpty())
+				
+			
+			//StringBuilder(x).reverse().toString().equals(x);
+		}
+		
+		for(int i = 0; i < a.size(); i++) {
 			
 		}
 	}
+	
 	
 	public static void main(String[] args) {
 		Homework ques1 = new Homework();
@@ -82,7 +169,19 @@ public class Homework {
 		ques4.factorial(10);
 		
 		Homework ques5 = new Homework();
-		ques5.SubStringMethod("Butterfly", 5);
+		ques5.Substring("Butterfly", 5);
 		
+		Homework ques6 = new Homework();
+		ques6.checkEven(10);
+		
+		//Homework ques7 = new Homework();
+		List<Employee> employees = new ArrayList<>();
+		Homework ques7.new Homework(employees.add(new Employee("Javier", "Tech", 31)));
+		
+		Homework ques8 = new Homework();
+		ArrayList<String> arrList = new ArrayList<>(Arrays.asList("karan", "madam",
+				"tom", "civic", "radar", "jimmy", "kayak", "john", "refer", "billy",
+				"did"));
+		ques8.palindromeChecker(arrList);
 	}
 }
