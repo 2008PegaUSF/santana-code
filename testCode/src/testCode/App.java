@@ -5,10 +5,10 @@ public class App {
 		
 		Runnable runnable = new MakePrime();
 		Thread makePrime = new Thread(runnable);
-		Runnable runnable2 = new TakePrime();
-		Thread takePrime = new Thread(runnable2);
+		//Runnable runnable2 = new TakePrime();
+		//Thread takePrime = new Thread(runnable2);
 		
 		makePrime.start();
-		takePrime.start();
+		//takePrime.start();
 	}
 }

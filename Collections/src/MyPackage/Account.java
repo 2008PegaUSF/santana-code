@@ -1,5 +1,5 @@
 
-package hw1javiersantana;
+package MyPackage;
 
 import java.util.ArrayList;
 import java.util.Date;

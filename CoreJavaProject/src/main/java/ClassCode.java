@@ -1,9 +1,17 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
 
-public class Homework {
 
+public class ClassCode {
+	
+	private static final Logger logger = LogManager.getLogger(ClassCode.class.getName());
+	
 	//Q1: method for sorting array (bubble sort)
 		public void BubbleSort(int[] arr){
 			int temp = 0;
+			
+		    logger.trace("bubble sort");
 			
 			for(int i=0; i < arr.length; i++) {
 				for(int j = 1; j < (arr.length-i); j++) {
@@ -59,6 +67,11 @@ public class Homework {
 		System.out.println(result);
 	}
 	
-	
-	
+	public static void main(String[] args) {
+		Configurator.initialize(null, "log4j2.xml");
+		logger.debug("Debug Message Logged !!!");
+        logger.info("Info Message Logged !!!");
+        logger.error("Error Message Logged !!!", new NullPointerException("NullError"));
+		
+	}
 }

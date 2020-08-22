@@ -1,4 +1,4 @@
-package hw1javiersantana;
+package MyPackage;
 
 import java.util.Date;
 

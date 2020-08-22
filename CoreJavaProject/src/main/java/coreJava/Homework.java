@@ -18,7 +18,7 @@ public class Homework {
 
 	//Question 1
 	//method for sorting array (bubble sort)
-	public void BubbleSort(int[] arr){
+	public void bubbleSort(int[] arr){
 		int temp = 0;
 		
 		for(int i=0; i < arr.length; i++) {
@@ -80,7 +80,7 @@ public class Homework {
 	
 	//Question 5
 	
-	public void Substring(String a, int b) {
+	public void substring(String a, int b) {
 		char[] array = new char[b];
 		for(int i=0; i< b; i++) {
 			array[i] = a.charAt(i);
@@ -102,7 +102,7 @@ public class Homework {
 	//Question 7
 	
 	public void employeeSort() {
-		ArrayList<Employee> employees = new ArrayList<>();
+		ArrayList<Employee> employees = new ArrayList<Employee>();
 		employees.add(new Employee("Javier", "Tech", 31));
 		employees.add(new Employee("Ryan", "Music", 25));
 		Collections.sort(employees, Employee.AgeComparator);
@@ -138,21 +138,18 @@ public class Homework {
 		
 		
 		public static Comparator<Employee> NameComparator = new Comparator<Employee>() {
-			@Override
 			public int compare(Employee e1, Employee e2) {
 				return e1.getName().compareTo(e2.getName());
 			}
 		};
 		
 		public static Comparator<Employee> DepartmentComparator = new Comparator<Employee>() {
-			@Override
 			public int compare(Employee e1, Employee e2) {
 				return e1.getDepartment().compareTo(e2.getDepartment());
 			}
 		};
 		
 		public static Comparator<Employee> AgeComparator = new Comparator<Employee>() {
-			@Override
 			public int compare(Employee e1, Employee e2) {
 				return e1.getAge() - e2.getAge();
 			}
@@ -169,7 +166,7 @@ public class Homework {
 	//Question 8
 	
 	public void palindromeChecker() {
-		ArrayList<String> a = new ArrayList<>(Arrays.asList("karan", "madam",
+		ArrayList<String> a = new ArrayList<String>(Arrays.asList("karan", "madam",
 				"tom", "civic", "radar", "jimmy", "kayak", "john", "refer", "billy",
 				"did"));
 		ArrayList<String> palindrome = new ArrayList<String>();
@@ -236,14 +233,16 @@ public class Homework {
 	
 	public void printEven() {
 		int[] numbers = new int[100];
+		ArrayList<Integer> evens = new ArrayList<Integer>();
 		for(int i=0; i < numbers.length; i++) {
 			numbers[i] = (i + 1) * 1;
 		}
 		for(int x : numbers) {
 			if(x % 2 == 0) {
-				System.out.println(x);
+				evens.add(x);
 			}
 		}
+		System.out.println(evens);
 	}
 	
 	//Question 13
@@ -269,6 +268,7 @@ public class Homework {
 	//Question 14
 	
 	public void switchCase() {
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		System.out.println("What would you like to do? ");
 		System.out.println("To get the square root of a number type '1'");
@@ -298,7 +298,6 @@ public class Homework {
 				}
 				break;
 		}
-		input.close();
 	}
 	
 	//Question 15
@@ -322,22 +321,18 @@ public class Homework {
 	
 	public static class OperationsWork implements Operations{
 
-		@Override
 		public void addition(int a, int b) {
 			System.out.println(a + b);
 		}
 
-		@Override
 		public void subtraction(int a, int b) {
 			System.out.println(a - b);
 		}
 
-		@Override
 		public void multiplication(int a, int b) {
 			System.out.println(a * b);
 		}
 
-		@Override
 		public void division(int a, int b) {
 			System.out.println(a / b);
 		}
@@ -367,18 +362,11 @@ public class Homework {
 	
 	//Question 17
 	
-	public void simpleIntrest() {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Please enter the principal: ");
-		double principal = (double) input.nextInt();
-		System.out.println("Please enter the rate (per year): ");
-		double percentage = input.nextDouble();
-		System.out.println("Please enter the time (in years): ");
-		int time = input.nextInt();
+	public void simpleIntrest(double principal, double percentage, int time) {
+		
 		//Interest = Principal* Rate* Time
 		double interest = (principal * percentage * (double) time)/100;
 		System.out.println("Simple interest is: " + interest);
-		input.close();
 		
 	}
 	
@@ -497,7 +485,7 @@ public class Homework {
 		//Question 1 driver
 		Homework ques1 = new Homework();
 		int[] arr = {1,0,5,6,3,2,3,7,9,8,4};
-		ques1.BubbleSort(arr);
+		ques1.bubbleSort(arr);
 		System.out.println();
 		
 		//Question 2 driver
@@ -518,7 +506,7 @@ public class Homework {
 		
 		//Question 5 driver
 		Homework ques5 = new Homework();
-		ques5.Substring("Butterfly", 5);
+		ques5.substring("Butterfly", 5);
 		System.out.println();
 		
 		//Question 6 driver
@@ -578,7 +566,14 @@ public class Homework {
 		
 		//Question 17 driver
 		Homework ques17 = new Homework();
-		ques17.simpleIntrest();
+		Scanner input1 = new Scanner(System.in);
+		System.out.println("Please enter the principal: ");
+		double principal = (double) input1.nextInt();
+		System.out.println("Please enter the rate (per year): ");
+		double percentage = (double) input1.nextInt();
+		System.out.println("Please enter the time (in years): ");
+		int time = input1.nextInt();
+		ques17.simpleIntrest(principal, percentage, time);
 		System.out.println();
 		
 		//Question 18 driver
