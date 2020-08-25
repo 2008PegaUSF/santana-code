@@ -16,6 +16,119 @@ import NewPackage.FloatingNumbers;
 
 public class Homework {
 
+	//main with drivers
+	
+		public static void main(String[] args) {
+			//Question 1 driver
+			Homework ques1 = new Homework();
+			int[] arr = {1,0,5,6,3,2,3,7,9,8,4};
+			ques1.bubbleSort(arr);
+			System.out.println();
+			
+			//Question 2 driver
+			Homework ques2 = new Homework();
+			ques2.fibonacci();
+			System.out.println();
+			
+			//Question 3 driver
+			Homework ques3 = new Homework();
+			String a = "Homework";
+			ques3.reverse(a);
+			System.out.println();
+			
+			//Question 4 driver
+			Homework ques4 = new Homework();
+			ques4.factorial(10);
+			System.out.println();
+			
+			//Question 5 driver
+			Homework ques5 = new Homework();
+			ques5.substring("Butterfly", 5);
+			System.out.println();
+			
+			//Question 6 driver
+			Homework ques6 = new Homework();
+			ques6.checkEven(5);
+			System.out.println();
+			
+			//Question 7 driver
+			Homework ques7 = new Homework();
+			ques7.employeeSort();
+			System.out.println();
+			
+			//Question 8 driver
+			Homework ques8 = new Homework();
+			ques8.palindromeChecker();
+			System.out.println();
+			
+			//Question 9 driver
+			Homework ques9 = new Homework();
+			ques9.findPrime();
+			System.out.println();
+			
+			//Question 10 driver
+			Homework ques10 = new Homework();
+			ques10.minOf2(3, 18);
+			System.out.println();
+			
+			//Question 11 driver
+			Homework ques11 = new Homework();
+			ques11.accessModifier();
+			System.out.println();
+			
+			//Question 12 driver
+			Homework ques12 = new Homework();
+			ques12.printEven();
+			System.out.println();
+			
+			//Question 13 driver
+			Homework ques13 = new Homework();
+			ques13.printPyramid();
+			System.out.println();
+			
+			//Question 14 driver
+			Homework ques14 = new Homework();
+			ques14.switchCase();
+			System.out.println();
+			
+			//Question 15 driver
+			Homework.OperationsTest ques15 = new Homework.OperationsTest();
+			ques15.main();
+			System.out.println();
+			
+			//Question 16 driver
+			Homework ques16 = new Homework();
+			ques16.countArguments(args);
+			System.out.println();
+			
+			//Question 17 driver
+			Homework ques17 = new Homework();
+			Scanner input1 = new Scanner(System.in);
+			System.out.println("Please enter the principal: ");
+			double principal = (double) input1.nextInt();
+			System.out.println("Please enter the rate (per year): ");
+			double percentage = (double) input1.nextInt();
+			System.out.println("Please enter the time (in years): ");
+			int time = input1.nextInt();
+			ques17.simpleIntrest(principal, percentage, time);
+			System.out.println();
+			
+			//Question 18 driver
+			Homework ques18 = new Homework();
+			ques18.inheritAbstractMethods();
+			System.out.println();
+			
+			//Question 19 driver
+			Homework ques19 = new Homework();
+			ques19.arrayListFun();
+			System.out.println();
+			
+			//Question 20 driver
+			Homework ques20 = new Homework();
+			ques20.readFile();
+		}
+	
+	
 	//Question 1
 	//method for sorting array (bubble sort)
 	public void bubbleSort(int[] arr){
@@ -497,117 +610,5 @@ public class Homework {
 		} catch (IOException e) {
 			System.out.println("File read error");
 		}
-	}
-	
-	//main with drivers
-	
-	public static void main(String[] args) {
-		//Question 1 driver
-		Homework ques1 = new Homework();
-		int[] arr = {1,0,5,6,3,2,3,7,9,8,4};
-		ques1.bubbleSort(arr);
-		System.out.println();
-		
-		//Question 2 driver
-		Homework ques2 = new Homework();
-		ques2.fibonacci();
-		System.out.println();
-		
-		//Question 3 driver
-		Homework ques3 = new Homework();
-		String a = "Homework";
-		ques3.reverse(a);
-		System.out.println();
-		
-		//Question 4 driver
-		Homework ques4 = new Homework();
-		ques4.factorial(10);
-		System.out.println();
-		
-		//Question 5 driver
-		Homework ques5 = new Homework();
-		ques5.substring("Butterfly", 5);
-		System.out.println();
-		
-		//Question 6 driver
-		Homework ques6 = new Homework();
-		ques6.checkEven(5);
-		System.out.println();
-		
-		//Question 7 driver
-		Homework ques7 = new Homework();
-		ques7.employeeSort();
-		System.out.println();
-		
-		//Question 8 driver
-		Homework ques8 = new Homework();
-		ques8.palindromeChecker();
-		System.out.println();
-		
-		//Question 9 driver
-		Homework ques9 = new Homework();
-		ques9.findPrime();
-		System.out.println();
-		
-		//Question 10 driver
-		Homework ques10 = new Homework();
-		ques10.minOf2(3, 18);
-		System.out.println();
-		
-		//Question 11 driver
-		Homework ques11 = new Homework();
-		ques11.accessModifier();
-		System.out.println();
-		
-		//Question 12 driver
-		Homework ques12 = new Homework();
-		ques12.printEven();
-		System.out.println();
-		
-		//Question 13 driver
-		Homework ques13 = new Homework();
-		ques13.printPyramid();
-		System.out.println();
-		
-		//Question 14 driver
-		Homework ques14 = new Homework();
-		ques14.switchCase();
-		System.out.println();
-		
-		//Question 15 driver
-		Homework.OperationsTest ques15 = new Homework.OperationsTest();
-		ques15.main();
-		System.out.println();
-		
-		//Question 16 driver
-		Homework ques16 = new Homework();
-		ques16.countArguments(args);
-		System.out.println();
-		
-		//Question 17 driver
-		Homework ques17 = new Homework();
-		Scanner input1 = new Scanner(System.in);
-		System.out.println("Please enter the principal: ");
-		double principal = (double) input1.nextInt();
-		System.out.println("Please enter the rate (per year): ");
-		double percentage = (double) input1.nextInt();
-		System.out.println("Please enter the time (in years): ");
-		int time = input1.nextInt();
-		ques17.simpleIntrest(principal, percentage, time);
-		System.out.println();
-		
-		//Question 18 driver
-		Homework ques18 = new Homework();
-		ques18.inheritAbstractMethods();
-		System.out.println();
-		
-		//Question 19 driver
-		Homework ques19 = new Homework();
-		ques19.arrayListFun();
-		System.out.println();
-		
-		//Question 20 driver
-		Homework ques20 = new Homework();
-		ques20.readFile();
 	}
 }

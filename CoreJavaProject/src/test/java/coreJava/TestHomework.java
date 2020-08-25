@@ -57,7 +57,6 @@ public class TestHomework {
 		
 	}
 	
-	//This actually does equal but for some reason the test says that it doesn't
 	@Test
 	public void shouldReverseString() {
 		String expectedValue = "krowemoH";
