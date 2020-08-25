@@ -593,7 +593,7 @@ public class Homework {
 	//Question 20
 	//method to read file and print out values in a specific order
 	public void readFile() {
-		File file = new File("C:\\Users\\Javy\\Desktop\\Spring Tool Suite 4\\santana-code\\coreJava\\src\\coreJava\\Data.txt");
+		File file = new File("Data.txt");
 		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
