@@ -5,9 +5,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -18,13 +15,7 @@ import coreJava.Homework.Employee;
 public class TestHomework {
 
 	Homework test = new Homework();
-	@Test
-	public void shouldDoNothingWithEmptyArray() {
-        int[] values = {};
- 
-        test.bubbleSort(values);
-    }
-	
+		
 	@Test
     public void shouldDoNothingWithOneElementArray() {
         int[] values = {42};
