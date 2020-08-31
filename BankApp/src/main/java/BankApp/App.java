@@ -263,7 +263,7 @@ public class App {
 					start(users, joint, fileName, fileName2);
 				}
 			}
-			System.out.println("Ussername not found!");
+			System.out.println("Username not found!");
 			start(users, joint, fileName, fileName2);
 		}
 	}
@@ -441,7 +441,9 @@ public class App {
 						choiceMade = false;
 						break;
 				}
+				
 			}
+			
 		}while(choiceMade);
 	}
 	
