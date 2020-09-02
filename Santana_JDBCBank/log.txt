@@ -1,0 +1,11 @@
+[2020-09-02 00:13:49,562]  - The main() method is called
+[2020-09-02 00:13:52,286]  - The start() method is called
+[2020-09-02 00:13:56,794]  - User 5 logged in
+[2020-09-02 00:13:56,794]  - The menu() function is called
+[2020-09-02 00:13:56,801]  - User is logged in
+[2020-09-02 00:14:00,043]  - User is logged in
+[2020-09-02 00:14:05,723]  - Deposit made
+[2020-09-02 00:14:05,724]  - User is logged in
+[2020-09-02 00:14:11,167]  - Withdrawal made
+[2020-09-02 00:14:11,168]  - User is logged in
+[2020-09-02 00:14:12,128]  - The start() method is called
