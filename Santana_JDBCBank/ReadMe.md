@@ -11,18 +11,29 @@ how to use and run the banking application.
 
 ---
 
+##Table of Contents
+1. [Installation](#Installation)
+2. [Functionality](#Functionality)
+3. [Technologies](Technologies)
+4. [Admin](Admin)
+5. [FAQs](FAQs)
+6. [License](License)
+
+---
+<a name="Installation"></a>
 ## Installation
 
 Requires Java JRE (minimum).
 
 ---
-
+<a name="Functionality"></a>
 ##Functionality
+---
 
 ![deposit/withdraw](http://g.recordit.co/VtPl3uDlYo.gif)
 
 ---
-
+<a name="Technologies"></a>
 ## Technologies
 
 Written in Java utilizing JDBC for database functionality.
@@ -36,14 +47,14 @@ Testing completed in JUnit.
 Project managed in Maven.
 
 ---
-
+<a name="Admin"></a>
 ## Admin Login
 
 Username: admin
 Password: password
 
 ---
-
+<a name="FAQs"></a>
 ##FAQs
 
 **How do I make a new user account?**
@@ -59,7 +70,7 @@ Login with your username and password. Then follow the on screen prompts and inp
 Only an administrator has the authority to delete an account. Please contact an administrator.
 
 ---
-
+<a name="License"></a>
 ##License
 
 Copyright 2020 © Javier Santana
