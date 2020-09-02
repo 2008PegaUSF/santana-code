@@ -16,8 +16,13 @@ import com.revature.daoimpl.UserDaoImpl;
 
 public class App {
 	
+	private static final Logger logger = LogManager.getLogger(App.class);
 	
 	public static void main (String[] args) {
+		
+		Configurator.initialize(null, "log4j2.xml");
+		
+		logger.info("The main() method is called");
 		
 		UserDaoImpl users = new UserDaoImpl();
 		
@@ -36,7 +41,7 @@ public class App {
 	
 	public static void start(UserDaoImpl users) {
 		
-		
+		logger.info("The start() method is called");
 		
 		ArrayList<User> allUsers = new ArrayList<User>();
 		
@@ -59,6 +64,8 @@ public class App {
 		String result = (String)input.next().toLowerCase();
 		
 		if(result.equals("new")) {
+			
+			logger.info("New account creation");
 			
 			System.out.println("Will this be a joint account? 'Y' - yes, 'N'- No");
 			String yesOrNo = (String)input.next().toLowerCase();
@@ -124,7 +131,6 @@ public class App {
 					try {
 						
 						users.addNewJointUser(newUsername, newPassword, newUsername2, newPassword2);
-					
 					} catch (SQLException e) {
 						
 						e.printStackTrace();
@@ -162,6 +168,7 @@ public class App {
 					}
 					
 					System.out.println("New user added successfully!");
+					logger.info("New user added to User table");
 					start(users);
 					
 				default:
@@ -171,6 +178,7 @@ public class App {
 			
 		} 
 		else if(result.equals("exit")){
+			logger.info("Application closed by user");
 			System.exit(0);
 		} 
 		else {
@@ -190,6 +198,7 @@ public class App {
 						if(allUsers.get(i).getPassword().contentEquals(password)) {
 						
 							System.out.println("Login Successful!\n");
+							logger.info("User " +allUsers.get(i).getUserId() +  " logged in");
 							
 							if(allUsers.get(i).getUserType().contentEquals("Admin")) {
 							
@@ -219,12 +228,13 @@ public class App {
 			}
 		}
 		System.out.println("Username not found!");
+		logger.info("User doesn't exist");
 		start(users);
 		
 	}
 	
 	public static void menu(String type, Scanner input, UserDaoImpl users, String username) {
-		
+		logger.info("The menu() function is called");
 		int choice;
 		boolean choiceMade = true;
 		int accountNum = 0;
@@ -235,6 +245,7 @@ public class App {
 		
 		do {
 			if(type == "Admin") {
+				logger.info("User is admin");
 				//ADMIN MENU
 				System.out.println("\nTo check customer info choose '1'\n"
 						+ "To approve or deny new accounts choose '2'\n"
@@ -444,6 +455,7 @@ public class App {
 						}
 						else {
 							//ADMIN DENY USER
+							logger.warn("User is removed");
 							try {
 								
 								users.deny(userId);
@@ -595,6 +607,7 @@ public class App {
 							users.deny(cancelAccountNum);
 							
 							System.out.println("Account successfully canceled");
+							logger.info("User account removed");
 						
 						} catch (SQLException e) {
 							
@@ -614,6 +627,7 @@ public class App {
 				}
 			} 
 			else if(type == "Employee") {
+				logger.info("User is employee");
 				//EMPLOYEE MENU
 				System.out.println("\nTo check customer info choose '1'\n"
 						+ "To approve or deny new accounts choose '2'\n"
@@ -754,6 +768,7 @@ public class App {
 												accounts.addNewAccount(customers.getAccountId(userId));
 												
 												System.out.println("Users added successfully!");
+												logger.info("User account created");
 											
 											} catch (SQLException e) {
 												
@@ -812,6 +827,7 @@ public class App {
 								accounts.addNewAccount(customers.getAccountId(userId));
 								
 								System.out.println("Account added successfully!");
+								logger.info("User account created");
 							
 							} catch (SQLException e) {
 								
@@ -841,6 +857,7 @@ public class App {
 					break;
 				}
 			} else {
+				logger.info("User is logged in");
 				//USER MENU
 				System.out.println("\nTo check your balance choose '1'\n"
 						+ "To make a deposit choose '2'\n"
@@ -880,6 +897,7 @@ public class App {
 										singleUser.getUserIdFromUsername(username)), deposit);
 								currentBalance += deposit;
 								good = true;
+								logger.info("Deposit made");
 							}
 						}while(!good);
 						System.out.println("Deposit successful, current balance is: "+ currentBalance);
@@ -917,6 +935,7 @@ public class App {
 								}
 								currentBalance -= withdraw;
 								good = true;
+								logger.info("Withdrawal made");
 							}
 						}while(!good);
 						System.out.println("Withdrawal successful, current balance is: "+ currentBalance);
@@ -952,6 +971,7 @@ public class App {
 						try {
 							accounts.transfer(customers.getAccountId(singleUser.getUserIdFromUsername(username)), acctTo, transfer);
 							currentBalance1 -= transfer;
+							logger.info("Transfer made");
 						} catch (SQLException e) {
 							e.printStackTrace();
 						}

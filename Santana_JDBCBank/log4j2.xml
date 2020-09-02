@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="warn" strict="true">
+<Configuration status="warn">
     <Appenders>
         <File name="File" fileName="log.log">
             <PatternLayout pattern="[%d]  - %msg%n"/>
         </File>
-        <appender name="DB" class="org.apache.log4j.jdbc.JDBCAppender">
-		   <param name="jdbc:postgresql://pega2008usfsantana.ctwnyn7z7pi8.us-east-2.rds.amazonaws.com/bank"/>
-		   <param name="driver" value="com.revature.driver.App"/>
-		   <param name="user" value="admin1"/>
-		   <param name="password" value="password"/>
-		   <param name="sql" value="INSERT INTO Transactions VALUES('%x','%m','%m','%d')"/>
-		   
-		   <layout class="org.apache.log4j.PatternLayout">
-		   </layout>
-		</appender>
     </Appenders>
     
     <Loggers>
         <Root level="all">
             <AppenderRef ref="File"/>
         </Root>
-        <logger name="log4j2.xml" additivity="false">
-		   <level value="DEBUG"/>
-		   <appender-ref ref="DB"/>
-		</logger>
     </Loggers>
 </Configuration>
