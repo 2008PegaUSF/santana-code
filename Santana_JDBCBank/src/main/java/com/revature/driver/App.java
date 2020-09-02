@@ -299,8 +299,7 @@ public class App {
 						int userId = Integer.parseInt(input.next());
 						
 						for(int i=0; i < newUsers.size(); i++) {
-							System.out.println(newUsers.get(i).getUserId());
-							System.out.println(newUsers.get(i).getJointId());
+							
 							if(newUsers.get(i).getUserId() == userId && newUsers.get(i).getJointId() > 0) {
 								int jointId = newUsers.get(i).getJointId();
 								for (int j=0; j < newUsers.size(); j++) {
@@ -677,8 +676,7 @@ public class App {
 						int userId = Integer.parseInt(input.next());
 						
 						for(int i=0; i < newUsers.size(); i++) {
-							System.out.println(newUsers.get(i).getUserId());
-							System.out.println(newUsers.get(i).getJointId());
+							
 							if(newUsers.get(i).getUserId() == userId && newUsers.get(i).getJointId() > 0) {
 								int jointId = newUsers.get(i).getJointId();
 								for (int j=0; j < newUsers.size(); j++) {
