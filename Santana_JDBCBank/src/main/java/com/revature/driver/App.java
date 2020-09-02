@@ -16,13 +16,8 @@ import com.revature.daoimpl.UserDaoImpl;
 
 public class App {
 	
-	private static final Logger logger = LogManager.getLogger(App.class);
 	
 	public static void main (String[] args) {
-		
-		Configurator.initialize(null, "log4j2.xml");
-		
-		
 		
 		UserDaoImpl users = new UserDaoImpl();
 		
@@ -229,8 +224,6 @@ public class App {
 	}
 	
 	public static void menu(String type, Scanner input, UserDaoImpl users, String username) {
-		
-		logger.debug("The menu() method is called");
 		
 		int choice;
 		boolean choiceMade = true;
@@ -853,7 +846,8 @@ public class App {
 						+ "To make a deposit choose '2'\n"
 						+ "To make a withdrawal choose '3'\n"
 						+ "To make a transfer choose '4'\n"
-						+ "To exit choose '5'");
+						+ "To make a an account choose '5'\n"
+						+ "To exit choose '6'");
 				
 				choice = Integer.parseInt(input.next());
 				switch(choice) {
