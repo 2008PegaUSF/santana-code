@@ -11,7 +11,7 @@ how to use and run the banking application.
 
 ---
 
-##Table of Contents
+**Table of Contents**
 1. [Installation](#Installation)
 2. [Functionality](#Functionality)
 3. [Technologies](Technologies)
@@ -27,7 +27,7 @@ Requires Java JRE (minimum).
 
 ---
 <a name="Functionality"></a>
-##Functionality
+**Functionality**
 ---
 
 ![deposit/withdraw](http://g.recordit.co/VtPl3uDlYo.gif)
@@ -55,7 +55,7 @@ Password: password
 
 ---
 <a name="FAQs"></a>
-##FAQs
+**FAQs**
 
 **How do I make a new user account?**
 In the main menu, type 'new'. Then follow the on screen prompts and input your desired username and password.
@@ -71,6 +71,6 @@ Only an administrator has the authority to delete an account. Please contact an 
 
 ---
 <a name="License"></a>
-##License
+**License**
 
 Copyright 2020 © Javier Santana
