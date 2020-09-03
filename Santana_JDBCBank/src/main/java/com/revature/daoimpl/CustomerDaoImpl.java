@@ -18,7 +18,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	public List<Customer> getCustomerInfo(int id) throws SQLException {
 		List<Customer> customers = new ArrayList<Customer>();
 		Connection conn = cf.getConnection();
-		String sql = "select * from \"Customer\" where \"AccountId\"= ?";
+		String sql = "select * from \"Customer\" where \"UserId\"= ?";
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ps.setInt(1, id);
 		ResultSet rs = ps.executeQuery();
