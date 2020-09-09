@@ -248,3 +248,34 @@
 [2020-09-02 22:25:52,848]  - User account removed
 [2020-09-02 22:25:52,848]  - User is admin
 [2020-09-02 22:25:55,982]  - The start() method is called
+[2020-09-03 10:08:08,112]  - The main() method is called
+[2020-09-03 10:08:14,902]  - The start() method is called
+[2020-09-03 10:09:56,492]  - User doesn't exist
+[2020-09-03 10:09:56,492]  - The start() method is called
+[2020-09-03 10:10:12,032]  - The start() method is called
+[2020-09-03 10:10:17,630]  - New account creation
+[2020-09-03 10:10:31,536]  - New user added to User table
+[2020-09-03 10:10:31,537]  - The start() method is called
+[2020-09-03 10:10:42,214]  - The start() method is called
+[2020-09-03 10:10:48,352]  - User 34 logged in
+[2020-09-03 10:10:48,353]  - The menu() function is called
+[2020-09-03 10:10:48,520]  - User is logged in
+[2020-09-03 10:11:37,518]  - User is logged in
+[2020-09-03 10:11:47,183]  - Deposit made
+[2020-09-03 10:11:47,183]  - User is logged in
+[2020-09-03 10:11:54,058]  - User is logged in
+[2020-09-03 10:12:12,545]  - Withdrawal made
+[2020-09-03 10:12:12,545]  - User is logged in
+[2020-09-03 10:12:35,096]  - User account removed
+[2020-09-03 10:12:35,096]  - User is logged in
+[2020-09-03 10:12:45,960]  - The start() method is called
+[2020-09-03 10:12:53,959]  - User doesn't exist
+[2020-09-03 10:12:53,960]  - The start() method is called
+[2020-09-03 10:13:00,576]  - User 1 logged in
+[2020-09-03 10:13:00,576]  - The menu() function is called
+[2020-09-03 10:13:00,576]  - User is admin
+[2020-09-03 10:13:14,782]  - New user created by admin
+[2020-09-03 10:13:15,835]  - User is admin
+[2020-09-03 10:13:32,325]  - User is admin
+[2020-09-03 10:14:17,991]  - User is admin
+[2020-09-03 10:14:24,327]  - User is admin
