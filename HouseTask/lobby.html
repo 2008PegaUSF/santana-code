@@ -9,9 +9,11 @@
     <body>
         <h1>Lobby</h1>
         <img src="https://elitewoodrefinishing.com/wp-content/uploads/2019/05/front-door-2.jpg">
-        <div style="margin-left: 100px;">
-            <button type="button" name="enter" formaction="/HomeAdventure/api/">Enter</button>
-        </div>
+        <form name="lobby" method="GET" action="HomeAdventure/api/">
+            <div style="margin-left: 100px;">
+                <button type="button" name="enter" value="enter" >Enter</button>
+            </div>
+        </form>
 
         <script type="text/javascript" src="event.js"></script>
     </body>

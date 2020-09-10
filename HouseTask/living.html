@@ -9,12 +9,12 @@
     <body>
         <h1>Living Room</h1>
         <img src="https://cdn.shopify.com/s/files/1/0023/2066/2593/files/LIAs_A84TGGyNNjOOjrwVA_thumb_8657_large.jpg?v=1569299249">
-        <form style="margin-left: 100px;" method="GET">
-            <button type="button" onclick="location.href='kitchen.html'" id="living-button-left">Left</button>
-            <button type="button" id="living-button-forward">Forward</button>
-            <button type="button" id="living-button-right">Right</button>
-            <button type="button" id="living-button-back">Back</button>
-        </form>
+        <div style="margin-left: 100px;" method="GET">
+            <button type="button" name="living" formaction="/HomeAdventure/api/left">Left</button>
+            <button type="button" name="living" formaction="/HomeAdventure/api/forward">Forward</button>
+            <button type="button" name="living" formaction="/HomeAdventure/api/right">Right</button>
+            <button type="button" name="living" formaction="/HomeAdventure/api/back">Back</button>
+        </div>
 
         <script type="text/javascript" src="event.js"></script>
     </body>
